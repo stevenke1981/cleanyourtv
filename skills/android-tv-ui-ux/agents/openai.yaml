@@ -1,0 +1,4 @@
+interface:
+  display_name: "Android TV UI/UX"
+  short_description: "Plan TV focus, remote navigation and accessible states"
+  default_prompt: "Use $android-tv-ui-ux to refine this CleanYourTV screen and record focus, Back and accessibility acceptance."

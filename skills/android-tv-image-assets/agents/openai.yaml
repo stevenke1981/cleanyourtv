@@ -1,0 +1,4 @@
+interface:
+  display_name: "Android TV image assets"
+  short_description: "Generate TV artwork and validate Android and ICO exports"
+  default_prompt: "Use $android-tv-image-assets to create a dark wallpaper and transparent icon with built-in image_gen, then validate Android assets and an optional ICO export."

@@ -1,0 +1,2 @@
+# Local image conversion only; no API/network client.
+Pillow==12.0.0
