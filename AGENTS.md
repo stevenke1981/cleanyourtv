@@ -256,34 +256,6 @@ use it and links the tool guides it needs.
 | Screenshots | Every visual change has a screenshot from the TV in the PR description. A performance claim has numbers, for example from `tools/bench.py`. |
 | Stray files | No files that nothing links to: screenshots belong in the PR description, not the tree. |
 
-## Hard rules
-
-Never do these in a PR:
-
-- **No prebuilt APKs or binaries** in the repo, not even as CI artifacts. People build from source.
-- **No uninstalling.** No `pm uninstall` in a list or a script. `pm hide` or `pm block` only with the matching
-  undo written in the list header.
-- **No network in the launcher:** no `INTERNET` permission, no network features, no analytics or telemetry, no
-  background services or polling, no blur or video. It targets TVs with 1 GB of RAM.
-- **No new launcher dependencies** without discussing them in an issue first.
-- **No changes to the safety rules** in `PROMPT.md`, the Home guard and other safety checks in
-  `tools/disable.sh`, `tools/check.py` and `launcher/build-and-install.sh`, or the list of packages the TV
-  needs, without the maintainer.
-- **No changing a default for every TV.** New behaviour is off until a theme or `config.xml` turns it on.
-- **Firmware updaters are better left enabled** (commented out in the list); a list that disables one says
-  why in its header.
-- **No Private DNS or AdGuard setup, and no install or restore scripts, inside a list folder.** The README
-  already has the optional DNS extra; a note that Private DNS works on that TV is fine.
-- **No secrets or identifiers** in commits, lists or screenshots: no IP addresses, Wi-Fi names, account emails,
-  serial numbers, Android IDs, MAC addresses or ADB keys. Use `<tv ip>` or `192.168.1.50` in docs.
-- **Don't edit `.github/workflows/`** or the APK size gate in a normal PR. A PR whose main content is a new CI
-  workflow that builds or publishes releases is closed.
-- **Don't open factory or test menus** on a TV to see what they do. Factory packages may be disabled, never
-  launched.
-- **No root, no getting around app-store protection, no private builds** others cannot reproduce from this repo.
-- **No extras added to the PROMPT flow** beyond debloating and the launcher.
-- **Don't relax `minSdk`** (26) or the launcher's permissions; those are forks for `SHOWCASE.md`.
-
 ## Privacy and screenshots
 
 - The launcher's top bar shows the Wi-Fi network name, and a theme's `greeting_name` shows a name. Blur
